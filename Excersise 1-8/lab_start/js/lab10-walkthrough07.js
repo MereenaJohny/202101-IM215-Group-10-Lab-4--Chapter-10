@@ -19,7 +19,8 @@ $(function () {
 function removePreview() {// remove the dynamic element and the gray class
     $(this).removeClass("gray");
     $("#preview").remove();
-} function movePreview(e) {// position preview based on mouse coordinates
+} function movePreview(e) {
+    // position preview based on mouse coordinates
     $("#preview").css("top", (e.pageY - 10) + "px").css("left", (e.pageX + 30) + "px");
 } 
 $("figure img").on("mouseleave", removePreview); $("figure img").on("mousemove", movePreview);
