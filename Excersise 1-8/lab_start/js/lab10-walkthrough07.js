@@ -7,7 +7,8 @@ $(function () {
         var newsrc = src.replace("small", "medium");
         // make dynamic element with larger preview image and caption
         var preview = $('<div id="preview"></div>');
-        var image = $('<img src="' + newsrc + '">'); var caption = $('<p>' + alt + '</p>');
+        var image = $('<img src="' + newsrc + '">');
+        var caption = $('<p>' + alt + '</p>');
         preview.append(image); preview.append(caption);
         $('body').append(preview);
         // make small image gray
