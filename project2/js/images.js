@@ -10,3 +10,18 @@ $(function () {
         list.append(img);                                             
         $('.gallery').append(list);                                       
     }
+
+    $('.gallery img').on('mouseenter', function(e) {
+
+    });
+
+    $('.gallery img').on('mouseleave', function(e) {
+
+    });
+
+    $('.gallery img').on('mousemove', function(e) {
+        
+    });
+
+
+});
