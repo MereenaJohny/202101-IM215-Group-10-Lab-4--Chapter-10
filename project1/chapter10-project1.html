@@ -87,6 +87,16 @@
             $(this).attr('value', $(this).val());
             imageeditor();
         });
+        function imageeditor() {
+            var $newOpacity = $('#sliderOpacity').attr('value');
+            var $newSaturatiion = $('#sliderSaturation').attr('value');
+            var $newBrightness = $('#sliderBrightness').attr('value');
+            var $newHue = $('#sliderHue').attr('value');
+            var $newGray = $('#sliderGray').attr('value');
+            var $newBlur = $('#sliderBlur').attr('value');
+            $('#imgManipulated img').css('filter', 'opacity(' + $newOpacity + '%) saturate(' + $newSaturatiion + '%) brightness(' + $newBrightness + '%) hue-rotate(' + $newHue + 'deg) grayscale(' + $newGray + '%) blur(' + $newBlur + 'px)');
+            $('#imgManipulated img').css('-webkit-filter', 'opacity(' + $newOpacity + '%) saturate(' + $newSaturatiion + '%) brightness(' + $newBrightness + '%) hue-rotate(' + $newHue + 'deg) grayscale(' + $newGray + '%) blur(' + $newBlur + 'px)');
+        }
 
     </script>
 </body>
