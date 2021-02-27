@@ -43,7 +43,9 @@ $(function () {
     });
 
     $('.gallery img').on('mousemove', function(e) {
-        
+        $("#preview").css("display","block");
+        $("#preview").css("top", (e.pageY - 30) + "px");
+        $("#preview").css("left", (e.pageX + 50) + "px");
     });
 
 
