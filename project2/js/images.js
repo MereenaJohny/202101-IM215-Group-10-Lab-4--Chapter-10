@@ -29,7 +29,10 @@ $(function () {
         }
         var newCaption = $("<p>" + alt1 + '</p>');
         prev.append(path);
-        prev.append(newCaption);  
+        prev.append(newCaption); 
+        $("#preview").css("display", "block");
+        $("#preview").css("top", (e.pageY - 30) + "px");
+        $("#preview").css("left", (e.pageX + 50) + "px");
 
 
     });
