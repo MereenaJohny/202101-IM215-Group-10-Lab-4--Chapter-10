@@ -42,17 +42,50 @@
             <div><img src="images/small/painting5.jpg" alt="Milkmaid" title="Johannes Vermeer, c. 1660" /></div>
         </div>
     </main>
-    <script>
-        
+    <script>      
 
         $('div img').on('click', function () {
-            
             var splitted = $(this).attr('src').split("images/small");
             var newl = "images/medium";
             var newlink = newl + splitted[1];
-
             $('figure img').attr("src", newlink);
             $('figcaption').html("<em>" + $(this).attr('alt') + "</em><br>" + $(this).attr('title'));
+        });
+
+        $('#sliderOpacity').on('input', function () {
+            $('#numOpacity').html($(this).val());
+            $(this).attr('value', $(this).val());
+            imageeditor();
+        });
+
+        $('#sliderSaturation').on('input', function () {
+            $('#numSaturation').html($(this).val());
+            $(this).attr('value', $(this).val());
+            imageeditor();
+        });
+
+        $('#sliderBrightness').on('input', function () {
+            $('#numBrightness').html($(this).val());
+            $(this).attr('value', $(this).val());
+            imageeditor();
+        });
+
+        $('#sliderHue').on('input', function () {
+            $('#numHue').html($(this).val());
+            $(this).attr('value', $(this).val());
+            imageeditor();
+        });
+
+        $('#sliderGray').on('input', function () {
+            $('#numGray').html($(this).val());
+            $(this).attr('value', $(this).val());
+            imageeditor();
+        });
+
+        $('#sliderBlur').on('input', function () {
+            $('#numBlur').html($(this).val());
+            $(this).attr('value', $(this).val());
+            imageeditor();
         });
 
     </script>
