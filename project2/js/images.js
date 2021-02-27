@@ -18,6 +18,18 @@ $(function () {
         var splitted = $(this).attr('src').split("images/square");
         var newl = "images/medium";
         var newlink = newl + splitted[1];
+        var prev = $("<div id= 'preview'></div>");
+        var path = $("<img src='" + newlink + "'>");
+        var alt1 = alt;
+        for (count = 0; count < images.length; count++) {
+            if (alt == images[count].title) {
+                alt1 = alt1 + "<br><I>" + images[count].city + ", " + images[count].country + ", [" + images[count].taken + "]</I>";
+                break;
+            }
+        }
+        var newCaption = $("<p>" + alt1 + '</p>');
+        prev.append(path);
+        prev.append(newCaption);  
 
 
     });
