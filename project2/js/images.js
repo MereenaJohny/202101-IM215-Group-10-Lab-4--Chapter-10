@@ -38,7 +38,8 @@ $(function () {
     });
 
     $('.gallery img').on('mouseleave', function(e) {
-
+        $(this).removeClass("gray");
+        $("#preview").remove();
     });
 
     $('.gallery img').on('mousemove', function(e) {
