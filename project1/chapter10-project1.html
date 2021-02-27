@@ -97,6 +97,19 @@
             $('#imgManipulated img').css('filter', 'opacity(' + $newOpacity + '%) saturate(' + $newSaturatiion + '%) brightness(' + $newBrightness + '%) hue-rotate(' + $newHue + 'deg) grayscale(' + $newGray + '%) blur(' + $newBlur + 'px)');
             $('#imgManipulated img').css('-webkit-filter', 'opacity(' + $newOpacity + '%) saturate(' + $newSaturatiion + '%) brightness(' + $newBrightness + '%) hue-rotate(' + $newHue + 'deg) grayscale(' + $newGray + '%) blur(' + $newBlur + 'px)');
         }
+        $(button).on('click', function (e) {
+            e.preventDefault();
+            
+            $('#imgManipulated img').css('filter', '');
+            $('#imgManipulated img').css('-webkit-filter', '');
+            
+            $('#sliderOpacity').attr('value', '100');
+            $('#sliderSaturation').attr('value', '100');
+            $('#sliderBrightness').attr('value', '100');
+            $('#sliderHue').attr('value', '0');
+            $('#sliderGray').attr('value', '0');
+            $('#sliderBlur').attr('value', '0');
+        });
 
     </script>
 </body>
