@@ -52,74 +52,9 @@
             var newlink = newl + splitted[1];
 
             $('figure img').attr("src", newlink);
-            //Step 4: Change the figcaption to display title and artist information.
-
             $('figcaption').html("<em>" + $(this).attr('alt') + "</em><br>" + $(this).attr('title'));
         });
 
-        //Step 5: set up event listeners for the input event of each of the range sliders.
-
-        $('#sliderOpacity').on('input', function () {
-            $('#numOpacity').html($(this).val());
-            $(this).attr('value', $(this).val());
-            imageeditor();
-        });
-
-        $('#sliderSaturation').on('input', function () {
-            $('#numSaturation').html($(this).val());
-            $(this).attr('value', $(this).val());
-            imageeditor();
-        });
-
-        $('#sliderBrightness').on('input', function () {
-            $('#numBrightness').html($(this).val());
-            $(this).attr('value', $(this).val());
-            imageeditor();
-        });
-
-        $('#sliderHue').on('input', function () {
-            $('#numHue').html($(this).val());
-            $(this).attr('value', $(this).val());
-            imageeditor();
-        });
-
-        $('#sliderGray').on('input', function () {
-            $('#numGray').html($(this).val());
-            $(this).attr('value', $(this).val());
-            imageeditor();
-        });
-
-        $('#sliderBlur').on('input', function () {
-            $('#numBlur').html($(this).val());
-            $(this).attr('value', $(this).val());
-            imageeditor();
-        });
-
-        //Step 5: To set filter and -web-kit-filter properties on the image in the <figure>
-        function imageeditor() {
-            var $newOpacity = $('#sliderOpacity').attr('value');
-            var $newSaturatiion = $('#sliderSaturation').attr('value');
-            var $newBrightness = $('#sliderBrightness').attr('value');
-            var $newHue = $('#sliderHue').attr('value');
-            var $newGray = $('#sliderGray').attr('value');
-            var $newBlur = $('#sliderBlur').attr('value');
-            $('#imgManipulated img').css('filter', 'opacity(' + $newOpacity + '%) saturate(' + $newSaturatiion + '%) brightness(' + $newBrightness + '%) hue-rotate(' + $newHue + 'deg) grayscale(' + $newGray + '%) blur(' + $newBlur + 'px)');
-            $('#imgManipulated img').css('-webkit-filter', 'opacity(' + $newOpacity + '%) saturate(' + $newSaturatiion + '%) brightness(' + $newBrightness + '%) hue-rotate(' + $newHue + 'deg) grayscale(' + $newGray + '%) blur(' + $newBlur + 'px)');
-        }
-        //Step 6: To add listener for the click event of the reset button
-        $(button).on('click', function (e) {
-            e.preventDefault();
-            //Step 6: To remove filters from the image
-            $('#imgManipulated img').css('filter', '');
-            $('#imgManipulated img').css('-webkit-filter', '');
-            //Step 6:Reset the value of attribute
-            $('#sliderOpacity').attr('value', '100');
-            $('#sliderSaturation').attr('value', '100');
-            $('#sliderBrightness').attr('value', '100');
-            $('#sliderHue').attr('value', '0');
-            $('#sliderGray').attr('value', '0');
-            $('#sliderBlur').attr('value', '0');
-        });
     </script>
 </body>
 </html>
