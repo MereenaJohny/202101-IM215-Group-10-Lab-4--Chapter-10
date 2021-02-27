@@ -11,7 +11,14 @@ $(function () {
         $('.gallery').append(list);                                       
     }
 
-    $('.gallery img').on('mouseenter', function(e) {
+    $('.gallery img').on('mouseenter', function (e) {
+
+        $(this).addClass("gray");
+        var alt = $(this).attr("alt");
+        var splitted = $(this).attr('src').split("images/square");
+        var newl = "images/medium";
+        var newlink = newl + splitted[1];
+
 
     });
 
